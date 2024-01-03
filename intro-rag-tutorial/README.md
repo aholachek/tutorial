@@ -11,7 +11,10 @@ This introductory level workshop aims to get participants comfortable with tools
 
 We're going to build a toy [RAG](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html#retrieval-augmented-generation-rag) question-answering bot that is specialized for giving us plot summaries of the first season of Better Call Saul. We'll see how easy LlamaIndex makes it to create a RAG bot that downloads information from the internet and packages that as context for the bot.
 
-Ultimately, we want to build a bot that correctly answers the following question:
+
+## Our Goal
+
+Ultimately, we want to build a bot that **correctly** answers the following question:
 
 > "What happened in episode 3 of season 1 of better call saul? Summarize the episode in bullet points.
 
