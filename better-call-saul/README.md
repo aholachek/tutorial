@@ -30,30 +30,31 @@ Consult [this doc](https://docs.python-guide.org/starting/install3/osx/) for det
 
 ### 2. Create a virtualenv
 1. Here's a little background on why you want to [use a virtualenv](https://www.zainrizvi.io/blog/jupyter-notebooks-best-practices-use-virtual-environments/).
-2. Create a new folder: `mkdir rag-tutorial; cd rag-tutorial`
+2. Make sure you're in the `tutorials` folder after cloning this repo.
 3. Create the virtualenv: `python -m venv myenv`
 4. Active the virtualenv: `source myenv/bin/activate` 
-5. To deactivate the virtualenv once you are done: `deactivate`
+5. [For later] To deactivate the virtualenv once you are done: `deactivate`
 
-### 3. Create a new notebook 
+### 3. Open the starter notebook
 1. Open vscode:  `code .` [(More details about this command)](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
-2. Create a file called `rag-tutorial.ipynb`.
-3. Select `myenv` as the kernel for the notebook.
+2. Open `tutorial/better-call-saul/starter-notebook.ipynb`.
+3. Select `Python environments/myenv` as the kernel for the notebook (you might be promptyed to install `ipykernel`).
 
 ### 4. Basic setup
-  First, we'll use LlamaIndex to set up the simplest possible question answering bot, using no external data sources. Open `starter-notebook.ipynb` and run the cells. At the bottom, you will probably see a response that includes some degree of hallucication and/or a refusal to answer the question:
+  First, we'll use LlamaIndex to set up the simplest possible question answering bot, using no external data sources. Spend some time reading the notebook `starter-notebook.ipynb` and, once you're ready, sequentially run the cells. At the bottom, you will probably see a response that includes some degree of hallucication and/or a refusal to answer the question:
 
  ```
  I'm sorry, but as an AI language model, I don't have real-time data or access to specific TV show episodes. However, you can find a detailed summary of episode 3 of season 1 of Better Call Saul on various TV show databases or streaming platforms.
  ```
   
- 
 ### 5. Adding RAG
-In order to get quality results, we need to add more context on the first season of Better Call Saul. We can do that by creating an actual RAG system as intended by LlamaIndex instead of the stub one we just ran in the starter notebook. The rest of the tutorial we will spend updating the notebook to hopefully produce a better response.
+In order to get quality results, we need to add more context on the first season of Better Call Saul. We can do that by creating an actual RAG system as intended by LlamaIndex instead of the stub one we just ran in the starter notebook. The rest of the tutorial we will spend updating the notebook to produce a better response.
 
 First up, we need to actually aquire some reliable data to work off of. I have provided a list of wikipedia urls for each episode from the first season of the show in `season_one_episodes.json`. Now we just need to turn them into downloaded documents ready to be indexed.
 
-1. First, add a new cell with the following code underneath the cell that sets up tracing:
+1. First, add a new cell with the following code underneath the cell that sets up tracing (cell 2). (Order is important!):
+
+This cell updates llamaindex to use a Huggingface model for embedding instead of OpenAI, saving us a little cash:
 
 ```python
 # to save money we're using the local embed model instead of the OpenAI default text-embedding-ada-002
@@ -68,9 +69,8 @@ service_context = ServiceContext.from_defaults(embed_model="local")
 set_global_service_context(service_context)
 ```
 
-This will use an open source model for embedding rather than the default, paid OpenAI model.
 
-2. Next, add another cell with the following code underneath the cell you just added:
+1. Next, replace the cell with the comment `#stub out the index for demo purposes` with the following content:
 
 ```python
 import json
@@ -109,7 +109,9 @@ else:
     index = load_existing_index()
 ```
 
-3. Finally, replace the final cell in the notebook with this code:
+This cell is where the downloading, parsing and indexing of our Better Call Saul data occurs.
+
+3. Finally, **replace** the final cell in the notebook with this code:
 
 ```python
 text_qa_template_str = """
@@ -182,7 +184,6 @@ Now, when running the notebook, you should get an answer that looks like this:
 - Mike suggests that the Kettlemans are hiding somewhere close to home, and Jimmy explores the desert near their house and discovers their stolen money.
 
 </details>
-
 
 
 Much better! You can clone this notebook and use it as a jumping off point to build your own RAG experiments. 
