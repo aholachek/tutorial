@@ -50,6 +50,7 @@ Consult [this doc](https://docs.python-guide.org/starting/install3/osx/) for det
 1. Open vscode:  `code .` [(More details about this command)](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
 2. Open `tutorial/intro-rag-tutorial/starter-notebook.ipynb`.
 3. Select `Python environments/myenv` as the kernel for the notebook (you might be promptyed to install `ipykernel`).
+4. You should now see something roughly [like this](https://github.com/aholachek/tutorial/blob/main/intro-rag-tutorial/img/notebook-img.png)
 
 ### 4. Basic setup
   First, we'll use LlamaIndex to set up the simplest possible question answering bot, using no external data sources. Spend some time reading the notebook `starter-notebook.ipynb` and, once you're ready, sequentially run the cells. At the bottom, you will probably see a response that includes some degree of hallucication and/or a refusal to answer the question:
