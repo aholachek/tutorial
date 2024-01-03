@@ -144,8 +144,6 @@ As you might have noticed, there are two places in the cells we added that have 
 1. choose an appropriate data loader for the wikipedia data, and 
 2. edit the `text_qa_template_str` to embed the context_str. Take some time to play around with the code to see what you can whip up. 
    
-**HINT:** Use the Arize tracing interface to check out what is happening under the hood and see if you're getting closer.
-
 <details>
   <summary>A solution for loader</summary>
  
