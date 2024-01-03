@@ -1,8 +1,9 @@
 # Build your own RAG Question Answering Bot
+*This tutorial is currently in draft state*
 
 ## Learning Objectives 
 
-- You will understand how to use Jupyter Notebooks, Python virtualenvs, and VScode to prototype your ideas
+- You will understand how to use Jupyter Notebooks, Python virtualenvs, and VS Code to prototype your ideas
 - You will have a high level grasp of how LlamaIndex helps you write RAG bots 
 - You will understand the basic steps behind the RAG concept
 - You will be able to build your own basic RAG question answering systems
@@ -11,7 +12,7 @@ This introductory level workshop aims to get participants comfortable with tools
 
 ## Tutorial Project
 
-![demo](https://media0.giphy.com/media/xUA7b12v8mfc37Ekus/giphy.gif?cid=ecf05e470adx2svalo5zvpm6yhybru4pnoxbjy1is6khh633&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+![img](https://media2.giphy.com/media/avx8Ba7NoFz3g8pFIF/200w.gif?cid=6c09b952ctuv1wk4fjc7rviagwe6yotav35txx7shm9nab8b&ep=v1_gifs_search&rid=200w.gif&ct=g)
 
 
 We're going to build a toy [RAG](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html#retrieval-augmented-generation-rag) question-answering bot that is specialized for giving us plot summaries of the first season of Better Call Saul. We'll see how easy LlamaIndex makes it to create a RAG bot that downloads information from the internet and packages that as context for the bot.
@@ -21,7 +22,7 @@ We're going to build a toy [RAG](https://docs.llamaindex.ai/en/stable/getting_st
 
 Ultimately, we want to build a bot that **correctly** answers the following question:
 
-> "What happened in episode 3 of season 1 of better call saul? Summarize the episode in bullet points.
+> "What happened in episode 3 of season 1 of Better Call Saul? Summarize the episode in bullet points.
 
 ## Setup
 
