@@ -1,3 +1,5 @@
+# Build your own RAG Question Answering Bot
+
 ## Learning Objectives 
 
 This introductory level workshop aims to get participants comfortable with tools like jupyter notebooks and LlamaIndex  as a jumping off point for further self-guided exploration.
