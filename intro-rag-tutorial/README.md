@@ -37,7 +37,7 @@ Consult [this doc](https://docs.python-guide.org/starting/install3/osx/) for det
 
 ### 3. Open the starter notebook
 1. Open vscode:  `code .` [(More details about this command)](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
-2. Open `tutorial/better-call-saul/starter-notebook.ipynb`.
+2. Open `tutorial/intro-rag-tutorial/starter-notebook.ipynb`.
 3. Select `Python environments/myenv` as the kernel for the notebook (you might be promptyed to install `ipykernel`).
 
 ### 4. Basic setup
