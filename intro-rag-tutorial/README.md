@@ -2,6 +2,11 @@
 
 ## Learning Objectives 
 
+- You will understand how to use Jupyter Notebooks, Python virtualenvs, and VScode to prototype your ideas
+- You will have a high level grasp of how LlamaIndex helps you write RAG bots 
+- You will understand the basic steps behind the RAG concept
+- You will be able to build your own basic RAG question answering systems
+
 This introductory level workshop aims to get participants comfortable with tools like jupyter notebooks and LlamaIndex  as a jumping off point for further self-guided exploration.
 
 ## Tutorial Project
