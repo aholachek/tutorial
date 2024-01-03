@@ -8,14 +8,12 @@
 - You will understand the basic steps behind the RAG concept
 - You will be able to build your own basic RAG question answering systems
 
-This introductory level workshop aims to get participants comfortable with tools like jupyter notebooks and LlamaIndex  as a jumping off point for further self-guided exploration.
-
 ## Tutorial Project
 
 ![img](https://media2.giphy.com/media/avx8Ba7NoFz3g8pFIF/200w.gif?cid=6c09b952ctuv1wk4fjc7rviagwe6yotav35txx7shm9nab8b&ep=v1_gifs_search&rid=200w.gif&ct=g)
 
 
-We're going to build a toy [RAG](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html#retrieval-augmented-generation-rag) question-answering bot that is specialized for giving us plot summaries of the first season of Better Call Saul. We'll see how easy LlamaIndex makes it to create a RAG bot that downloads information from the internet and packages that as context for the bot.
+We're going to build a toy [RAG](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html#retrieval-augmented-generation-rag) question-answering bot that is specialized for giving us plot summaries of the first season of Better Call Saul. We'll see how easy LlamaIndex makes it to download information from the internet and package it as context for the bot.
 
 
 ## Our Goal
