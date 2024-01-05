@@ -214,7 +214,12 @@ Now, when running the notebook, you should get an answer that looks like this:
 Much better! This closely follows the Wikipedia summary and is in fact correct.
 
 
-### Next Steps: building a new bot
+### 4. Adding tracing
+
+LlamaIndex has a variety of tracing options, many of which offer configuration in a line or 2. [You can read the docs here.](https://docs.llamaindex.ai/en/stable/module_guides/observability/observability.html) Can you get one of them working locally, and then rerun the notebook? What does the trace look like?
+
+
+### Final Project: Building a new bot
 
 If you'd like, you can copy the notebook you've been working on and use it as a jumping off point to make your own question answering bot:
 1. Pick a favorite hobby or tv show or sport team
