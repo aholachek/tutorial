@@ -16,6 +16,10 @@ We're going to build a toy RAG question-answering bot that is specialized for gi
 
 [What is RAG (Retrival Augmented Generation)?](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html)
 
+### RAG diagram
+
+![rag](https://docs.llamaindex.ai/en/stable/_images/basic_rag.png)
+
 
 ## Our Goal
 
