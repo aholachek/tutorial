@@ -1,5 +1,4 @@
 # Build your own RAG Question Answering Bot
-*This tutorial is currently in draft state*
 
 ## Learning Objectives 
 
@@ -22,11 +21,8 @@ Ultimately, we want to build a bot that **correctly** answers the following ques
 
 > "What happened in episode 3 of season 1 of Better Call Saul? Summarize the episode in bullet points.
 
-## Setup
 
-There are a few setup steps below before you can get to the good stuff, however once you set everything up once, you'll have a blueprint for experimentation going forward.
-
-### Prep
+## Prep Before the Workshop
 
 1. Make sure you have python 3 installed.
 Consult [this doc](https://docs.python-guide.org/starting/install3/osx/) for details if you think it's possible you only have python 2.
@@ -36,33 +32,47 @@ Consult [this doc](https://docs.python-guide.org/starting/install3/osx/) for det
    2. virtualenv: `pip install virtualenv`
 3. Fork this repo
 4. Read through the [llamaindex starter tutorial](https://docs.llamaindex.ai/en/stable/getting_started/starter_example.html).
+5. (Optional) Install VS Code if you don't have it
 
-### 2. Create a virtualenv
+#### Why use VS Code?
+1. Better devexp than jupyter notebooks interface
+2. Copilot! (`cmd + i`)
+
+## Workshop Setup
+
+### 1. Create a virtualenv
 1. Here's a little background on why you want to [use a virtualenv](https://www.zainrizvi.io/blog/jupyter-notebooks-best-practices-use-virtual-environments/).
 2. Make sure you're in the `tutorials` folder after cloning this repo.
 3. Create the virtualenv: `python -m venv myenv`
 4. Active the virtualenv: `source myenv/bin/activate` 
 5. [For later] To deactivate the virtualenv once you are done: `deactivate`
 
-### 3. Open the starter notebook
+### 2. Open the starter notebook
 1. Open vscode:  `code .` [(More details about this command)](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
 2. Open `tutorial/intro-rag-tutorial/starter-notebook.ipynb`.
 3. Select `Python environments/myenv` as the kernel for the notebook (you might be promptyed to install `ipykernel`).
 4. You should now see something roughly [like this](https://github.com/aholachek/tutorial/blob/main/intro-rag-tutorial/img/notebook-img.png)
 
-### 4. Basic setup
-  First, we'll use LlamaIndex to set up the simplest possible question answering bot, using no external data sources. Spend some time reading the notebook `starter-notebook.ipynb` and, once you're ready, sequentially run the cells. At the bottom, you will probably see a response that includes some degree of hallucication and/or a refusal to answer the question:
+#### Why use VS Code?
+1. Better devexp than jupyter notebooks interface
+2. Copilot! (`cmd + i`)
+3. 
+## Creating a bot
+
+### 1. Basic setup
+  First, we'll use LlamaIndex to set up the simplest possible question answering bot, using no external data sources. Spend some time reading the notebook `starter-notebook.ipynb` and, once you're ready, sequentially run the cells. At the bottom, you will probably see a response that includes some degree of hallucination and/or a refusal to answer the question:
 
  ```
  I'm sorry, but as an AI language model, I don't have real-time data or access to specific TV show episodes. However, you can find a detailed summary of episode 3 of season 1 of Better Call Saul on various TV show databases or streaming platforms.
  ```
   
-### 5. Adding RAG
+### 2. Adding RAG
 In order to get quality results, we need to add more context on the first season of Better Call Saul. We can do that by creating an actual RAG system as intended by LlamaIndex instead of the stub one we just ran in the starter notebook. The rest of the tutorial we will spend updating the notebook to produce a better response.
 
 First up, we need to actually aquire some reliable data to work off of. I have provided a list of wikipedia urls for each episode from the first season of the show in `season_one_episodes.json`. Now we just need to turn them into downloaded documents ready to be indexed.
 
-1. First, add a new cell with the following code underneath the cell that sets up tracing (cell 2). (Order is important!):
+
+**First**, add a new cell with the following code underneath the cell that sets up tracing (cell 2). (Order is important!):
 
 This cell updates llamaindex to use a Huggingface model for embedding instead of OpenAI, saving us a little cash:
 
@@ -79,8 +89,7 @@ service_context = ServiceContext.from_defaults(embed_model="local")
 set_global_service_context(service_context)
 ```
 
-
-1. Next, replace the cell with the comment `#stub out the index for demo purposes` with the following content:
+**Next**, replace the cell with the comment `#stub out the index for demo purposes` with the following content:
 
 ```python
 import json
@@ -121,7 +130,7 @@ else:
 
 This cell is where the downloading, parsing and indexing of our Better Call Saul data occurs.
 
-3. Finally, **replace** the final cell in the notebook with this code:
+**Finally,** replace the final cell in the notebook with this code:
 
 ```python
 text_qa_template_str = """
@@ -138,7 +147,7 @@ has_rag_context_query_engine = index.as_query_engine(
 response = has_rag_context_query_engine.query(base_prompt)
 print(response)
 ```
-
+*
 As you might have noticed, there are two places in the cells we added that have `TODO` tasks for you to do in order to get this working. We need to:
 
 1. choose an appropriate data loader for the wikipedia data, and 
@@ -174,7 +183,7 @@ text_qa_template_str = """
 </details>
 
 
-### 6. Getting it all working
+### 3. Getting it all working
 
 Now, when running the notebook, you should get an answer that looks like this:
 
@@ -196,3 +205,8 @@ Now, when running the notebook, you should get an answer that looks like this:
 
 Much better! You can clone this notebook and use it as a jumping off point to build your own RAG experiments. 
 
+
+## Further resources
+
+- [Learn more about prompting](https://www.promptingguide.ai/)
+- [Productionizing LLMs](https://huyenchip.com/2023/04/11/llm-engineering.html)
