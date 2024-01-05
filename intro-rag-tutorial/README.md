@@ -143,7 +143,7 @@ has_rag_context_query_engine = index.as_query_engine(
 response = has_rag_context_query_engine.query(base_prompt)
 print(response)
 ```
-*
+
 As you might have noticed, there are two places in the cells we added that have `TODO` tasks for you to do in order to get this working. We need to:
 
 1. choose an appropriate data loader for the wikipedia data, and 
