@@ -232,3 +232,4 @@ You can clone this notebook and use it as a jumping off point to build your own 
 
 - [Learn more about prompting](https://www.promptingguide.ai/)
 - [Productionizing LLMs](https://huyenchip.com/2023/04/11/llm-engineering.html)
+- [Basics of embedding](https://txt.cohere.com/text-embeddings/)
