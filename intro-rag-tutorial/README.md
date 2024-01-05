@@ -26,7 +26,7 @@ Ultimately, we want to build a bot that **correctly** answers the following ques
 
 1. Make sure you have python 3 installed.
 Consult [this doc](https://docs.python-guide.org/starting/install3/osx/) for details if you think it's possible you only have python 2.
-1. You will need access to your own `OPEN_API_KEY`. Many LLM tools expect this key to exist in your env. To obtain a key, you will need a personal account with Open AI that has some credit on it. $5 should be plenty. Make sure to **turn off auto recharge** so that you aren't unexpectedly billed more. Once you've signed up and put money in your account, learn about how to [add the key as an environment variable here](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety).
+1. You will need access to your own `OPEN_API_KEY`. Many LLM tools expect this key to exist in your env. To obtain a key, you will need a personal account with Open AI that has some credit on it. $5 should be plenty. Mak e sure to **turn off auto recharge** so that you aren't unexpectedly billed more. Once you've signed up and put money in your account, learn about how to [add the key as an environment variable here](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety).
 2. Make sure you have acess to global installs for the following python libs:
    1. jupyter notebooks:`pip install notebook`
    2. virtualenv: `pip install virtualenv`
