@@ -71,6 +71,12 @@ Consult [this doc](https://docs.python-guide.org/starting/install3/osx/) for det
 ### 2. Adding RAG
 In order to get quality results, we need to add more context on the first season of Better Call Saul. We can do that by creating an actual RAG system as intended by LlamaIndex instead of the stub one we just ran in the starter notebook. The rest of the tutorial we will spend updating the notebook to produce a better response.
 
+This is going to consist of four new steps:
+1. [Loading data](https://docs.llamaindex.ai/en/stable/understanding/loading/loading.html)
+2. [Creating vector embeddings from our data](https://docs.llamaindex.ai/en/stable/understanding/loading/loading.html)
+3. [Storing indexed data](https://docs.llamaindex.ai/en/stable/understanding/indexing/indexing.html)
+4. [Querying our data](https://docs.llamaindex.ai/en/stable/understanding/querying/querying.html)
+
 First up, we need to actually aquire some reliable data to work off of. I have provided a list of wikipedia urls for each episode from the first season of the show in `season_one_episodes.json`. Now we just need to turn them into downloaded documents ready to be indexed.
 
 
