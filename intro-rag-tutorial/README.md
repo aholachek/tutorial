@@ -146,7 +146,7 @@ response = query_engine.query(base_prompt)
 print(response)
 ```
 
-As you might have noticed, there is a TODO in the second cell. We need to choose an appropriate data loader for the wikipedia data.
+As you might have noticed, there is a TODO in the second cell. We need to c[hoose an appropriate data loader](https://docs.llamaindex.ai/en/stable/understanding/loading/llamahub.html) for the wikipedia data.
    
 <details>
   <summary>A solution for loader</summary>
