@@ -14,7 +14,7 @@
 
 We're going to build a toy RAG question-answering bot that is specialized for giving us plot summaries of the first season of Better Call Saul. We'll see how easy LlamaIndex makes it to download information from the internet and package it as context for the bot.
 
-[What is RAG (Retrival Augmented Generation)?](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html)
+[What is RAG (Retrival Augmented Generation)?]([https://docs.llamaindex.ai/en/stable/getting_started/concepts.html](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html#stages-within-rag))
 
 ### RAG diagram
 
