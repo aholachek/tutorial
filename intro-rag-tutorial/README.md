@@ -19,7 +19,7 @@ We're going to build a toy RAG question-answering bot that is specialized for gi
 ### RAG diagram
 
 ![rag](https://docs.llamaindex.ai/en/stable/_images/basic_rag.png)
-
+_from the [llama index docs](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html)_
 
 ## Our Goal
 
