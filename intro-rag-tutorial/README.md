@@ -12,7 +12,9 @@
 ![img](https://media2.giphy.com/media/avx8Ba7NoFz3g8pFIF/200w.gif?cid=6c09b952ctuv1wk4fjc7rviagwe6yotav35txx7shm9nab8b&ep=v1_gifs_search&rid=200w.gif&ct=g)
 
 
-We're going to build a toy [RAG](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html#retrieval-augmented-generation-rag) question-answering bot that is specialized for giving us plot summaries of the first season of Better Call Saul. We'll see how easy LlamaIndex makes it to download information from the internet and package it as context for the bot.
+We're going to build a toy RAG question-answering bot that is specialized for giving us plot summaries of the first season of Better Call Saul. We'll see how easy LlamaIndex makes it to download information from the internet and package it as context for the bot.
+
+[What is RAG (Retrival Augmented Generation)?](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html)
 
 
 ## Our Goal
