@@ -141,25 +141,12 @@ This cell is where the downloading, parsing and indexing of our Better Call Saul
 **Finally,** replace the final cell in the notebook with this code:
 
 ```python
-text_qa_template_str = """
-    #  ----TODO:---- add context information here
-     Using only the context information, answer the question: {query_str}
-     If the context isn't helpful, say that you don't know the answer."""
-
-rag_text_qa_template = PromptTemplate(text_qa_template_str)
-
-has_rag_context_query_engine = index.as_query_engine(
-    text_qa_template=rag_text_qa_template
-)
-
-response = has_rag_context_query_engine.query(base_prompt)
+query_engine = index.as_query_engine()
+response = query_engine.query(base_prompt)
 print(response)
 ```
 
-As you might have noticed, there are two places in the cells we added that have `TODO` tasks for you to do in order to get this working. We need to:
-
-1. choose an appropriate data loader for the wikipedia data, and 
-2. edit the `text_qa_template_str` to embed the context_str. Take some time to play around with the code to see what you can whip up. 
+As you might have noticed, there is a TODO in the second cell. We need to choose an appropriate data loader for the wikipedia data.
    
 <details>
   <summary>A solution for loader</summary>
@@ -171,22 +158,6 @@ documents = loader.load_data(urls=urls)
 ```
 
 There are multiple solutions to this one, including using the dedicated Wikipedia loader.
-
-</details>
-
-<details>
-  <summary>Solution for context string in prompt</summary>
-
- ```python
-text_qa_template_str = """
-  Context information is provided below:
-  ________________________________________
-  {context_str}
-  ________________________________________
-  Using only the context information, answer the question: {query_str}
-  If the context isn't helpful, say that you don't know the answer.
-  """
-```
 
 </details>
 
@@ -209,7 +180,6 @@ Now, when running the notebook, you should get an answer that looks like this:
 - Mike suggests that the Kettlemans are hiding somewhere close to home, and Jimmy explores the desert near their house and discovers their stolen money.
 
 </details>
-
 
 Much better! This closely follows the Wikipedia summary and is in fact correct.
 
