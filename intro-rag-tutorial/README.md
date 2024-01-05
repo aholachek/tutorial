@@ -199,7 +199,16 @@ Now, when running the notebook, you should get an answer that looks like this:
 </details>
 
 
-Much better! You can clone this notebook and use it as a jumping off point to build your own RAG experiments. 
+Much better! This closely follows the Wikipedia summary and is in fact correct.
+
+
+### Next Steps: building a new bot
+
+If you'd like, you can copy the notebook you've been working on and use it as a jumping off point to make your own question answering bot:
+- Pick a favorite hobby or tv show or sport team
+- Figure out where to get information about it (wikipedia always works)
+- And update notebook cells to accommodate the new data. What sort of questions can you answer with your new bot? Is there any functionality that is surprising (either in a good or bad way)?
+You can clone this notebook and use it as a jumping off point to build your own RAG experiments. 
 
 
 ## Further resources
