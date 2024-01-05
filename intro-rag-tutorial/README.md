@@ -53,10 +53,6 @@ Consult [this doc](https://docs.python-guide.org/starting/install3/osx/) for det
 3. Select `Python environments/myenv` as the kernel for the notebook (you might be promptyed to install `ipykernel`).
 4. You should now see something roughly [like this](https://github.com/aholachek/tutorial/blob/main/intro-rag-tutorial/img/notebook-img.png)
 
-#### Why use VS Code?
-1. Better devexp than jupyter notebooks interface
-2. Copilot! (`cmd + i`)
-3. 
 ## Creating a bot
 
 ### 1. Basic setup
